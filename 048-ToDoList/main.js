@@ -3,6 +3,10 @@ const btn = document.querySelector(".addTask > button")
 
 btn.addEventListener('click', addList)
 
+input.addEventListener('keyup', (e) => {
+    (e.keyCode === 13 ? addList(e): null)
+})
+
 function addList(e){
     const notCompleted = document.querySelector(".notCompleted")
     const Completed = document.querySelector(".Completed")
@@ -36,3 +40,6 @@ function addList(e){
 
     }
 }
+
+const comp = document.querySelector('.Completed').parentElement
+console.log(comp)
